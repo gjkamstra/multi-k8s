@@ -12,7 +12,7 @@ docker push gkamstra/multi-worker:$SHA
 
 kubectl apply -f k8s
 
-kubectl set image deployments/client-deployment server=gkamstra/multi-client:$SHA
+kubectl set image deployments/client-deployment client=gkamstra/multi-client:$SHA
 kubectl set image deployments/server-deployment server=gkamstra/multi-server:$SHA
-kubectl set image deployments/worker-deployment server=gkamstra/multi-worker:$SHA
+kubectl set image deployments/worker-deployment worker=gkamstra/multi-worker:$SHA
 
