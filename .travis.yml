@@ -19,7 +19,7 @@ before_install:
   - docker build -t gkamstra/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true gkamstra/docker-react npm run test
+  - docker run -e CI=true gkamstra/react-test npm run test
 
 deploy:
   provider: script
